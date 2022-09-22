@@ -14,11 +14,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --verbose",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
+      "env": {"jest": true},
+      "extends": [
       "react-app",
       "react-app/jest"
     ]
@@ -34,5 +35,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+    
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
